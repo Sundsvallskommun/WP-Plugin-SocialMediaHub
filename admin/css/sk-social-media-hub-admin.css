@@ -1,0 +1,25 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.social-media-hub-admin .more{
+  margin-top: 10px;
+  background: #fcfcfc;
+  padding: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+}
+
+.social-media-hub-admin .error{
+  padding: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  background-color: #f2dede;
+  /*border-color: #ebccd1;*/
+  color: #a94442;
+}

@@ -1,0 +1,61 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.social-media-hub{
+  float:left;
+}
+
+.social-media-hub .feed-content{
+  padding: 10px;
+  font-size: 14px;
+  float: left;
+}
+
+.social-media-hub .feed-content p{
+  margin-top: 0;
+}  
+
+.social-media-hub .feed-item{
+  border: 1px solid #ccc;
+  margin-bottom: 25px;
+  float:left;
+  width: 100%;
+  color: #424242;
+  fill: #424242;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: hand;
+}
+
+.social-media-hub .feed-image{
+  width: 100px;
+  float:left;
+  margin-right: 10px;
+}
+
+.social-media-hub .feed-image img{
+  width: 100%;
+}
+
+.social-media-hub .feed-footer{
+  float:left;
+  width: 100%;
+  background: #eeeeee;
+  padding: 10px;
+  -webkit-filter: brightness(100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.social-media-hub .feed-item:hover .feed-footer{
+  background: #f7f7f7;
+}
+
+.social-media-hub .feed-sender-meta{
+  font-size: 14px;
+}
