@@ -1,15 +1,4 @@
 <?php
-
-/**
- * Register all actions and filters for the plugin
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    sk_social_media_hub
- * @subpackage sk_social_media_hub/includes
- */
-
 /**
  * Register all actions and filters for the plugin.
  *
@@ -17,28 +6,10 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    sk_social_media_hub
- * @subpackage sk_social_media_hub/includes
- * @author     Your Name <email@example.com>
  */
 class sk_social_media_hub_Loader {
 
-	/**
-	 * The array of actions registered with WordPress.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      array    $actions    The actions registered with WordPress to fire when the plugin loads.
-	 */
 	protected $actions;
-
-	/**
-	 * The array of filters registered with WordPress.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      array    $filters    The filters registered with WordPress to fire when the plugin loads.
-	 */
 	protected $filters;
 
 	/**
