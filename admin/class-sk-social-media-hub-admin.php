@@ -39,6 +39,8 @@ class SK_Social_Media_Hub_Admin {
 	 * ON RENAME: Enter the display name for the old name
 	 * in previous name to keep connection between posts and terms.
 	 *
+	 * @since 1.0.0
+	 *
 	 */
 	private function set_terms() {
 
@@ -57,49 +59,6 @@ class SK_Social_Media_Hub_Admin {
 		$this->services = $services;
 
 	}
-
-
-	/**
-	 * Check to see that box-type taxonomy is synced to default box types.
-	 *
-	 *
-	 * @return none
-	 */
-	/*
-	public function sync_box_types(){
-	  $taxonomy = 'social_media_hub_service';
-	  $services = apply_filters('sksmh_services', $this->services );
-
-	  $terms = get_terms( $taxonomy, array( 'hide_empty' => false ) );
-	  $current_services = array();
-
-	  foreach( $terms as $term ) {
-		$current_services[] = $term->name;
-	  }
-
-	  $diff = array_diff( $defaults, $current_box_types );
-	  echo "sync_box_types function...";
-	  die();
-	  // Compare arrays to get terms to insert or remove.
-	  $inserts = array_diff( $defaults, $current_box_types );
-	  $removes = array_diff( $current_box_types, $defaults );
-
-
-	  if( !empty( $removes ) ){
-		foreach ( $removes as $remove ) {
-		  $term = get_term_by( 'name', $remove, $taxonomy );
-		  wp_delete_term( $term->term_id, $taxonomy );
-		}
-	  }
-
-	  if( !empty( $inserts ) ){
-		foreach ( $inserts as $insert ) {
-		  wp_insert_term( $insert, $taxonomy );
-		}
-	  }
-
-	}
-  */
 
 
 	/**
@@ -135,8 +94,7 @@ class SK_Social_Media_Hub_Admin {
 	/**
 	 * Register taxonomies.
 	 *
-	 *
-	 * @return none
+	 * @since 1.0.0
 	 */
 	public function register_taxonomy() {
 
@@ -192,6 +150,8 @@ class SK_Social_Media_Hub_Admin {
 	/**
 	 * Adding the plugin page to settings
 	 *
+	 * @since 1.0.0
+	 *
 	 */
 	public function add_plugin_page() {
 
@@ -206,6 +166,12 @@ class SK_Social_Media_Hub_Admin {
 
 	}
 
+	/**
+	 * Save and update options.
+	 *
+	 * @since 1.0.0
+	 *
+	 */
 	public function update_options() {
 		$this->options = get_option( 'sk_social_media_hub' );
 		$currents      = $this->options;
@@ -256,6 +222,7 @@ class SK_Social_Media_Hub_Admin {
 	/**
 	 * Collect post request and route to method.
 	 *
+	 * @since 1.0.0
 	 *
 	 */
 	public function post_request() {
@@ -268,8 +235,8 @@ class SK_Social_Media_Hub_Admin {
 	/**
 	 * Setting page for editors who don´t have manage_options capability.
 	 *
+	 * @since 1.0.0
 	 *
-	 * @return [type]
 	 */
 	public function create_editor_page() {
 		$this->options = get_option( 'sk_social_media_hub' );
@@ -466,6 +433,12 @@ class SK_Social_Media_Hub_Admin {
 	}
 
 
+	/**
+	 * Register the settings for setting page.
+	 *
+	 * @since 1.0.0
+	 *
+	 */
 	public function register_settings() {
 
 		// Instagram Settings
@@ -651,11 +624,14 @@ class SK_Social_Media_Hub_Admin {
 		<?php
 	}
 
-
 	/**
 	 * Sanitize each setting field as needed
 	 *
-	 * @param array $input Contains all settings fields as array keys
+	 * @since 1.0.0
+	 *
+	 * @param $input
+	 *
+	 * @return array
 	 */
 	public function sanitize_input( $input ) {
 
@@ -708,7 +684,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Setting fields for activate.
+	 * Setting field for Instagram activate.
 	 *
 	 * @since 1.0.0
 	 *
@@ -726,7 +702,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Instagram.
 	 *
 	 * @since  1.0.0
 	 *
@@ -744,7 +720,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Instagram.
 	 *
 	 * @since 1.0.0
 	 *
@@ -758,7 +734,7 @@ class SK_Social_Media_Hub_Admin {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Instagram.
 	 *
 	 * @since 1.0.0
 	 */
@@ -781,7 +757,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Setting fields for activate.
+	 * Setting field for Facebook activate.
 	 *
 	 * @since 1.0.0
 	 */
@@ -798,7 +774,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Facebook.
 	 *
 	 * @since 1.0.0
 	 *
@@ -813,7 +789,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Facebook.
 	 *
 	 * @since 1.0.0
 	 *
@@ -828,7 +804,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Facebook.
 	 *
 	 * @since 1.0.0
 	 *
@@ -845,7 +821,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Facebook.
 	 *
 	 * @since 1.0.0
 	 *
@@ -863,7 +839,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Setting fields for activate.
+	 * Setting field for Twitter activate.
 	 *
 	 * @since 1.0.0
 	 */
@@ -880,7 +856,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * [twitter_access_token_callback description]
+	 * Setting field for Twitter.
 	 *
 	 * @since 1.0.0
 	 */
@@ -902,7 +878,7 @@ class SK_Social_Media_Hub_Admin {
 
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Twitter.
 	 *
 	 * @since 1.0.0
 	 *
@@ -916,7 +892,7 @@ class SK_Social_Media_Hub_Admin {
 	}
 
 	/**
-	 * Get the settings option array and print one of its values
+	 * Setting field for Twitter.
 	 *
 	 * @since 1.0.0
 	 *
