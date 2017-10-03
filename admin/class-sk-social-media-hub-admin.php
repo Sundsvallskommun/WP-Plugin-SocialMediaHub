@@ -14,7 +14,7 @@ class SK_Social_Media_Hub_Admin {
 	private $instagram_access_token;
 	private $services;
 	private static $post_type = 'social_media_hub';
-	private $instagram_redirect_url = 'http://utveckling.sundsvall.se/instagram-auth.php';
+	private $instagram_redirect_url = 'https://utveckling.sundsvall.se/instagram-auth.php';
 
 	/**
 	 * Initialize the class and set its properties.
